@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Welcome to the news highlight website </title>
+        {% endif %}
+    </head>
+    <body>
+            <!-- Business news -->
+            <h3> Business news</h3>
+            <ul>
+                {{ macro.displayNewsList(business)}}
+            </ul>
+            <!-- Upcoming movie 
+            <h3> Upcoming Movies </h3>
+            <ul>
+                {{ macro.displayMovieList(upcoming)}}
+            </ul>
+            <-- Now showing movie -->
+            <!-- <h3>Now Showing</h3>
+            <ul>
+                {{ macro.displayNewsList(now_showing)}}
+            </ul> --> 
+        </body>
+    
+</html>
+
