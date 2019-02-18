@@ -27,6 +27,7 @@ def get_news(category):
            news_sources_list = get_news_response['sources']
            news_sources = process_sources(news_sources_list)
 
+    return news_sources_list
 
 def process_sources(news_list):
     '''

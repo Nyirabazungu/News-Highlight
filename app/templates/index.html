@@ -9,21 +9,13 @@
         {% endif %}
     </head>
     <body>
-            <!-- Business news -->
-            <h3> Business news</h3>
-            <ul>
-                {{ macro.displayNewsList(business)}}
-            </ul>
-            <!-- Upcoming movie 
-            <h3> Upcoming Movies </h3>
-            <ul>
-                {{ macro.displayMovieList(upcoming)}}
-            </ul>
-            <-- Now showing movie -->
-            <!-- <h3>Now Showing</h3>
-            <ul>
-                {{ macro.displayNewsList(now_showing)}}
-            </ul> --> 
+           <!-- business newa section  -->
+        <h3>Business News</h3>
+        <ul>
+           {% for business_news in popular %}
+               <li>{{ business_news.title}}</li>
+           {% endfor %}
+       </ul>
         </body>
     
 </html>
