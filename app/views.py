@@ -32,6 +32,6 @@ def news(id):
     news = get_news(id)
     title = f'{news.title}'
 
-    return render_template('news.html',title = title,news = news)
+    return render_template('news.html',news = news)
 
  
