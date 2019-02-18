@@ -1,6 +1,8 @@
 from flask import render_template
 from app import app
 from .request import get_news,get_news
+from .request import get_article
+
 
 # Views
 
@@ -33,5 +35,9 @@ def news(id):
     title = f'{news.title}'
 
     return render_template('news.html',news = news)
+    
+
+    
+    
 
  

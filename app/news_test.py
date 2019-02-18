@@ -10,7 +10,7 @@ class NewsTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news= News("")
+        self.new_news= News("id","name","description","url","category","country")
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_news,News))

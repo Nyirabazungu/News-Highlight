@@ -3,9 +3,8 @@
     {% for news in news_list %}
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 news">
         <li>{{ news.description}}</li>
-        <li class="text-center">
-        <!-- <a href="/news/{{news.id}}"> -->
-            {{ news.name|truncate(10)}}</a>
+        <li class="text-left"><a href="/news/{{news_id}}">{{ news.name|truncate(10)}}</a>
+        <li class ="padding-left">
     {% endfor %}
 
 {% endmacro %}
