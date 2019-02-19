@@ -16,8 +16,6 @@
 ### Technologies used
     -Python
 
-### BDD
-
     
 ## link to live site on GitHub pages
    https://github.com/Nyirabazungu/News-Highlight
