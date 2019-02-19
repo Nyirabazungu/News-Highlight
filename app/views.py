@@ -1,7 +1,8 @@
 from flask import render_template
 from app import app
-from .request import get_news,get_news
-from .request import get_article
+from .request import get_news,get_articles
+# from .request import get_article,get_article
+
 
 
 # Views
@@ -16,7 +17,7 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    business_news = get_news('business')  
+    business_news= get_news('business')  
     sports_news = get_news('sports')   
     technology_news = get_news('technology')
 
@@ -24,17 +25,26 @@ def index():
     return render_template('index.html', business = business_news ,sports =sports_news, technology= technology_news )
 
 
-    
-@app.route('/news/<int:id>')
-def news(id):
+    # bloomberg_article = get_article('bloomberg')  
+    # espn_article = get_article('espn')   
+    # engadget_article= get_article('engadget')
+
+    # title = 'Home - Welcome to The best Review Website Online'
+    # return render_template('index.html',bloomberg = bloomberg_article,espn =espn_article, engadget= engadget_article)
+
+@app.route('/article/<id>')
+def article(id):
 
     '''
-    View news page function that returns the news details page and its data
+    View article page function that returns the article details page and its data
     '''
-    news = get_news(id)
-    title = f'{news.title}'
+    articles = get_articles(id)
+    print(articles)
+    # title = f'{article.title}'
 
-    return render_template('news.html',news = news)
+    return render_template('article.html',articles = articles)
+
+
     
 
     
