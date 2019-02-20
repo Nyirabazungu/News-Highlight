@@ -19,7 +19,7 @@
     -Python
     -html
     -css
-    -boostrap
+    -bootstrap
 
     
 ## link to live site on GitHub pages
