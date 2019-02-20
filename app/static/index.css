@@ -4,3 +4,6 @@ body{
 h1{
     text-align: center;
 }
+h3{
+    padding: em;
+}
