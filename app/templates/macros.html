@@ -3,10 +3,8 @@
     {% for news in news_list %}
     <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 news">
         
-            <li>{{ news.name}}</li>
+            <li class="panel panel-info"><a href="/article/{{news.id}}">{{ news.name}}</a>
             <li>{{ news.description}}</li>
-         
-            <li class="panel panel-info"><a href="/article/{{news_id}}">{{ news.name}}</a>
             <li class ="padding-left">
                 
          {% endfor %}

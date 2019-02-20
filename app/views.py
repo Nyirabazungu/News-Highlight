@@ -39,7 +39,7 @@ def article(id):
     View article page function that returns the article details page and its data
     '''
     articles = get_articles(id)
-    print(articles)
+   
     # title = f'{article.title}'
 
     return render_template('article.html',articles = articles)

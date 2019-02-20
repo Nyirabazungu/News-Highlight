@@ -17,6 +17,9 @@
 
 ### Technologies used
     -Python
+    -html
+    -css
+    -boostrap
 
     
 ## link to live site on GitHub pages

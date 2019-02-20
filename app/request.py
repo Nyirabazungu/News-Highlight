@@ -58,35 +58,15 @@ def process_sources(news_list):
 
     return news_sources
 
-    def get_news(id):
-        get_news_details_url = base_url.format(id,api_key)
-
-    with urllib.request.urlopen(get_news_details_url) as url:
-        news_details_data = url.read()
-        news_details_response = json.loads(news_details_data)
-
-        news_object = None
-        if news_details_response:
-            id = news_details_response.get('id')
-            name = news_details_response.get('name')
-            description = news_details_response.get('description')
-            url = news_details_response.get('url')
-            category = news_details_response.get('category')
-            language = news_details_response.get('language')
-            country = news_details_response.get('country')
-
-            news_object = News(id,name,description,url,category,language,country)
-
-    return news_object
-
 def get_articles(id):
     '''
     Function that gets the json response to our url request
     '''
     get_articles_url = base_url_article.format(id,api_key)
 
-    with urllib.requests.urlopen(get_articles_url) as url:
+    with urllib.request.urlopen(get_articles_url) as url:
         get_articles_response = json.loads(url.read())
+        print(get_articles_response)
         article_results = None
 
         if get_articles_response['articles']:
@@ -107,16 +87,15 @@ def process_results(article_list):
     '''
     article_results= []
     for article_item in article_list:
-       
-       title =article_item.get('title')
-       urlToimage = article_item.get('urlToimage')
-       description = article_item.get(' description ')
-       publishedAt = article_item.get(' publishedAt')
-       url = article_article_item.get ('url')
-      
+        title =article_item.get('title')
+        urlToImage = article_item.get('urlToImage')
+        description = article_item.get('description')
+        publishedAt = article_item.get('publishedAt')
+        url = article_item.get ('url')
+        
+        if urlToImage:
 
-       if  urlToimage:
-           article_object =Article (title,urlToimage,description,publishedAt,url)
+           article_object =Article(title,urlToImage,description,publishedAt,url)
            article_results.append(article_object)
 
     return article_results
